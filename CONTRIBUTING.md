@@ -8,15 +8,15 @@
 
 ## 本地开发流程
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 pnpm install
 pnpm dev
 ```
 
 如需数据库迁移：
 
-```bash
+```powershell
 pnpm db:migrate
 ```
 

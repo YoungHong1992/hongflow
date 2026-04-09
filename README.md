@@ -2,6 +2,12 @@
 
 HongFlow Community 是一个面向商品视觉与品牌内容生产的开源 AI 工作台。当前仓库已完成一期工程底座初始化，覆盖 `web + api + worker + shared packages + Docker Compose` 的最小可运行结构，作为后续社区版迭代的起点。
 
+## 状态文档
+
+- 全局索引：[PROJECTS_INDEX.md](/home/yanghong/Projects/hongflow/PROJECTS_INDEX.md)
+- 项目说明：[PROJECT.md](/home/yanghong/Projects/hongflow/PROJECT.md)
+- 进度追踪：[PROGRESS.md](/home/yanghong/Projects/hongflow/PROGRESS.md)
+
 ## 当前初始化范围
 
 - `apps/web`: React + React Flow 画布壳层与创意工作台 UI
@@ -15,8 +21,8 @@ HongFlow Community 是一个面向商品视觉与品牌内容生产的开源 AI 
 
 ## 快速开始
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 pnpm install
 pnpm build
 docker compose up -d
@@ -24,8 +30,8 @@ docker compose up -d
 
 本地开发：
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 pnpm install
 pnpm dev
 ```

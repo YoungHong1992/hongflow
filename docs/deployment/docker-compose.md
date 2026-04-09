@@ -15,7 +15,7 @@
 
 首次启动前请先准备 `.env`：
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 docker compose up -d --build
 ```

@@ -8,7 +8,7 @@ import { env, paths } from './env.js';
 import { getDatabaseHealth, sql } from './lib/db.js';
 import { runMigrations } from './lib/migrate.js';
 import { getQueueHealth, redis, runQueue } from './lib/queue.js';
-import { apiRoutes } from './routes/api.js';
+import { apiRoutes } from './routes/index.js';
 
 const bootstrap = async () => {
   const app = Fastify({

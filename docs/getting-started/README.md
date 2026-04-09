@@ -8,20 +8,20 @@
 
 ## 2. 初始化
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 pnpm install
 pnpm build
 ```
 
 ## 3. 本地开发
 
-```bash
+```powershell
 pnpm dev
 ```
 
 ## 4. Docker Compose
 
-```bash
+```powershell
 docker compose up -d
 ```
