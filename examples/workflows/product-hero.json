@@ -1,0 +1,40 @@
+{
+  "name": "Product Hero",
+  "schemaVersion": "0.1.0",
+  "nodes": [
+    {
+      "id": "asset-product",
+      "type": "Asset.ProductImage",
+      "position": { "x": 80, "y": 80 },
+      "data": { "label": "Product Image" }
+    },
+    {
+      "id": "prompt-main",
+      "type": "Text.Prompt",
+      "position": { "x": 320, "y": 120 },
+      "data": {
+        "label": "Prompt",
+        "prompt": "premium product hero shot, crisp lighting, premium shelf presence"
+      }
+    },
+    {
+      "id": "generator-main",
+      "type": "Generator.ImageGenerate",
+      "position": { "x": 620, "y": 120 },
+      "data": { "provider": "mock" }
+    },
+    {
+      "id": "gallery-main",
+      "type": "Result.Gallery",
+      "position": { "x": 920, "y": 120 },
+      "data": { "columns": 2 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "asset-product", "target": "generator-main" },
+    { "id": "e2", "source": "prompt-main", "target": "generator-main" },
+    { "id": "e3", "source": "generator-main", "target": "gallery-main" }
+  ],
+  "variables": {},
+  "viewport": { "x": 0, "y": 0, "zoom": 1 }
+}

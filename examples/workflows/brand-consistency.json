@@ -1,0 +1,47 @@
+{
+  "name": "Brand Consistency",
+  "schemaVersion": "0.1.0",
+  "nodes": [
+    {
+      "id": "asset-brand",
+      "type": "Asset.BrandImage",
+      "position": { "x": 80, "y": 80 },
+      "data": { "label": "Brand Image" }
+    },
+    {
+      "id": "prompt",
+      "type": "Text.Prompt",
+      "position": { "x": 320, "y": 180 },
+      "data": {
+        "label": "Prompt",
+        "prompt": "campaign-ready product scene with premium typography-safe spacing"
+      }
+    },
+    {
+      "id": "preset",
+      "type": "Control.ParamPreset",
+      "position": { "x": 320, "y": 360 },
+      "data": { "width": 1024, "height": 1024, "quality": "high" }
+    },
+    {
+      "id": "generate",
+      "type": "Generator.ImageGenerate",
+      "position": { "x": 650, "y": 240 },
+      "data": { "provider": "mock" }
+    },
+    {
+      "id": "export",
+      "type": "Export.ImageBundle",
+      "position": { "x": 980, "y": 240 },
+      "data": { "format": "png" }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "asset-brand", "target": "generate" },
+    { "id": "e2", "source": "prompt", "target": "generate" },
+    { "id": "e3", "source": "preset", "target": "generate" },
+    { "id": "e4", "source": "generate", "target": "export" }
+  ],
+  "variables": {},
+  "viewport": { "x": 0, "y": 0, "zoom": 1 }
+}

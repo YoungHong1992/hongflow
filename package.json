@@ -1,0 +1,27 @@
+{
+  "name": "hongflow-community",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.26.1",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build:packages": "pnpm -r --filter @hongflow/shared --filter @hongflow/nodes --filter @hongflow/providers --filter @hongflow/ui build",
+    "build:apps": "pnpm -r --filter @hongflow/api --filter @hongflow/worker --filter @hongflow/web build",
+    "build": "pnpm build:packages && pnpm build:apps",
+    "typecheck:packages": "pnpm build:packages && pnpm -r --filter @hongflow/shared --filter @hongflow/nodes --filter @hongflow/providers --filter @hongflow/ui typecheck",
+    "typecheck:apps": "pnpm -r --filter @hongflow/api --filter @hongflow/worker --filter @hongflow/web typecheck",
+    "typecheck": "pnpm typecheck:packages && pnpm typecheck:apps",
+    "check": "pnpm typecheck && pnpm build",
+    "dev": "pnpm build:packages && pnpm --parallel --filter @hongflow/api --filter @hongflow/worker --filter @hongflow/web dev",
+    "dev:api": "pnpm --filter @hongflow/api dev",
+    "dev:web": "pnpm --filter @hongflow/web dev",
+    "dev:worker": "pnpm --filter @hongflow/worker dev",
+    "db:migrate": "pnpm --filter @hongflow/api migrate"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Lifestyle Variation",
+  "schemaVersion": "0.1.0",
+  "nodes": [
+    {
+      "id": "asset-product",
+      "type": "Asset.ProductImage",
+      "position": { "x": 80, "y": 120 },
+      "data": { "label": "Product Image" }
+    },
+    {
+      "id": "asset-reference",
+      "type": "Asset.ReferenceImage",
+      "position": { "x": 80, "y": 320 },
+      "data": { "label": "Reference" }
+    },
+    {
+      "id": "batch",
+      "type": "Control.BatchVariants",
+      "position": { "x": 360, "y": 240 },
+      "data": { "count": 4 }
+    },
+    {
+      "id": "variation",
+      "type": "Generator.ImageVariation",
+      "position": { "x": 660, "y": 240 },
+      "data": { "provider": "mock" }
+    },
+    {
+      "id": "gallery",
+      "type": "Result.Gallery",
+      "position": { "x": 980, "y": 240 },
+      "data": { "columns": 2 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "asset-product", "target": "variation" },
+    { "id": "e2", "source": "asset-reference", "target": "variation" },
+    { "id": "e3", "source": "batch", "target": "variation" },
+    { "id": "e4", "source": "variation", "target": "gallery" }
+  ],
+  "variables": {},
+  "viewport": { "x": 0, "y": 0, "zoom": 1 }
+}

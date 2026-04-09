@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+  background: #05070d;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.react-flow__node-default {
+  min-width: 180px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
+    rgba(7, 10, 19, 0.92);
+  color: #f3f6fb;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
+  padding: 16px;
+}
+
+.react-flow__attribution {
+  display: none;
+}
